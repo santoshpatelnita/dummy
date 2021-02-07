@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, Field, useForm } from "@leveluptuts/fresh";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
+
 
 export default function From() {
     const dispatch = useDispatch()
@@ -19,12 +20,12 @@ export default function From() {
     return (
         <div>
             <Form formId="defaults" onSubmit={onSubmit} cancelButton={false} >
-                <Field>Name of the Dish</Field>
-                <Field>Ingredient Name</Field>
-                <Field>Ingredient Quantity</Field>
-                <Field>Unit Ingredient QTY</Field>
-                <Field>Steps to Cook</Field>
-                <Field>Picture URL</Field>
+                <Field>Name of the Dish</Field> <br/>
+                <Field>Ingredient Name</Field> <br />
+                <Field>Ingredient Quantity</Field><br />
+                <Field>Unit Ingredient QTY</Field><br />
+                <Field>Steps to Cook</Field><br />
+                <Field>Picture URL</Field><br />
             </Form>
         </div>
     )

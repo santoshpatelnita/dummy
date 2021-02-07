@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+ import './style.css';
 import { Provider } from 'react-redux'
 import store from './store'
 import Form from './components/From'
@@ -13,7 +13,6 @@ function App() {
     <Provider store={store}>
       <Router>
         <div>
-          <h2>Welcome to React Router Tutorial</h2>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <ul className="navbar-nav mr-auto">
               <li><Link to={'/'} className="nav-link">Form</Link></li>
