@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import Form from './components/From'
 import Card from './components/Card'
+import { PersistGate } from 'redux-persist/integration/react'
 
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
@@ -11,6 +12,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 function App() {
   return (
     <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,6 +28,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      </PersistGate>
     </Provider>
   );
 }

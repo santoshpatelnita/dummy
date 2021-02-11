@@ -5,11 +5,17 @@ import { Card, ListGroup } from 'react-bootstrap'
 
 export default function CardCom() {
     const formData = useSelector(state => state.form_data)
+    // const formData2=localStorage.getItem("details")
+    // var x=[];
+    // x.push(JSON.parse(formData2));
+    // const formData=x;
+
     console.log(formData)
     return (
         <div style={{ display: 'flex' }}>
 
-            {formData.map((item, key) =>
+            {
+                formData.map((item, key) =>
                 <div>
                     
                     <Card style={{ width: '18rem' }} key={key}>
